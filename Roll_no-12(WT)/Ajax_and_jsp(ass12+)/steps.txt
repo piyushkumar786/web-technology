@@ -1,0 +1,65 @@
+project->jsppk
+*require only netbeans
+1.create project with name jsppk(own_folder.name)
+2. index.html file creted write the code in index.html 
+3.right click on webpage create new page with name
+abc.jsp
+4.write code in abc.jsp
+5.right click on index.html and run.
+
+index.html
+<html>
+<head>
+<script>
+var request;
+function sendInfo()
+{
+	var v=document.f1.t1.value;
+	var url="abc.jsp?val="+v;
+	if(window.XMLHttpRequest)
+		{
+		request=new XMLHttpRequest();
+		}
+	request.onreadystatechange=getInfo;
+	request.open("GET",url,true);
+	request.send();
+}
+function getInfo()
+{
+ if(request.readyState==4)	{
+		var val=request.responseText;
+		document.getElementById('id1').innerHTML=val;
+		}
+}
+</script>
+</head>
+<body>
+<form name="f1">
+<input type="text" name="t1">
+<input type="button" value="showtable" onclick="sendInfo()">
+</form>
+<span id="id1"></span>
+</body>
+</html>
+
+abc.jsp
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+int n=Integer.parseInt(request.getParameter("val"));
+for(int i=0;i<=10;i++)
+{
+	out.print(i*n);
+	out.print("<br>");
+}
+
+%>
+</body>
+</html>

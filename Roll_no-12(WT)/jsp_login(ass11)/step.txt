@@ -1,0 +1,62 @@
+project->show
+*required netbeans+Xampp
+1.create project name with show.
+2.index.html file craete 
+3.right click on the webpage add new jsp file name is new.jsp
+4.right click on Library add Library i.e java JDBC driver or Mysql jdbc drive
+5.Again right click on Library add Add jar which is download from webserver
+6.Xampp require you can only start mysql becuase apache Tomacat present in the netbeans.you start 3 or 1
+depend on you.
+7.create database using localhost/phpmyadmin
+8.right click on index.html and run.
+
+userlogin->database
+user->table
+name->colunm1
+pass->column2
+action="new.jsp"
+
+
+
+
+
+index.html
+<html>
+<body>
+<form method="post" action="new.jsp">
+Enter username<input type="text" name="t1">
+<br>
+Enter password<input type="text" name="t2">
+<br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+new.jsp
+<%@ page import ="java.sql.*" %>
+<%@ page import ="javax.sql.*" %>
+<%
+Class.forName("com.mysql.jdbc.Driver");
+java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userlogin", "root", "");
+Statement st= con.createStatement();
+String name=request.getParameter("t1");
+String pass=request.getParameter("t2");
+st.executeUpdate("insert into user values('"+name+"','"+pass+"')");
+ResultSet rs=st.executeQuery("select * from user");
+out.print("<h2 align=center>userlogindatabase Database</h2>");
+out.print("<table border=1 align=center>");
+out.print("<tr><th> UNAME</th><th>PASS</th></tr>");
+while(rs.next())
+{
+out.print("<tr align=center>");
+out.print("<td>");
+out.print(rs.getString(1));
+out.print("</td>");
+out.print("<td>");
+out.print(rs.getString(2));
+out.print("</td>");
+out.print("</tr>");
+}
+%>
+

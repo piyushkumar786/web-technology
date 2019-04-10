@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="studentxsl.xsl"?>
+
+<college_data>
+	<student>
+	<name>Onkar Karale</name>
+	<roll>25</roll>
+	<dept>COMP</dept>
+	<address>Pune</address>
+	<contact>78882849</contact>
+	<BDay>19/7/1996</BDay>
+	<gender>Male</gender>
+	</student>
+	
+	<student>
+	<name>Pranali Shirke</name>
+	<roll>18</roll>
+	<dept>COMP</dept>
+	<address>Pune</address>
+	<contact>1234567</contact>
+	<BDay>27/2/1998</BDay>
+	<gender>Female</gender>
+	</student>
+	
+	<student>
+	<name>Aditya Ujenia</name>
+	<roll>20</roll>
+	<dept>COMP</dept>
+	<address>Pune</address>
+	<contact>88882149</contact>
+	<BDay>29/9/1997</BDay>
+	<gender>Male</gender>
+	</student>
+</college_data>

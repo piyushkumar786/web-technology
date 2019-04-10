@@ -1,0 +1,52 @@
+1.new project
+->Java EE
+->enterprise application
+->galssifier server->finish
+2.right click on .war file
+->add new page 
+->jsp page ->jsp_name->finish
+3.make form
+                              pkjsp.jsp
+     <form action="beanservlet.java" method="post">
+            <input type="text" name="t1" />
+            <input type="text" name="t2" />
+            <input type="submit" value="OK" />
+            </form>
+4. right click on .ejb file
+->other
+->enterprise java bean
+->Session Bean
+->next
+->ejb name(own)
+->package name(SessionBean)
+->click on local
+->finish
+
+5.right click in public class
+->add business module
+->business module name(own)
+->return type->java.lang.Integer
+->parameter
+a-int
+b-int
+->add->finish
+
+6.in business module name type->return(a+b);
+7. right click on .war file
+->add new page of servlet(.java file)
+->package(SessionBean) tick on xml add
+->right click in servlet class 
+->call enterprise
+->click on .ejb file
+->select bean file->finish
+
+8.write code in body session
+       int a=Integer.parseInt(request.getParameter("t1"));
+            int b=Integer.parseInt(request.getParameter("t1"));
+            out.println("<h1>Sum= " + calcbean.addition(a,b)+ "</h1>");
+9.right click on enterprise apllication
+->deploy
+->run
+->add .jsp file to url
+http://localhost:8080/EnterpriseApplication1-war/calc.jsp
+ "Congrats your code is RUN"

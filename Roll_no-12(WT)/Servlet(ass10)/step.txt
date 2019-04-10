@@ -1,0 +1,50 @@
+project pk
+require netbaens only
+1.create new project
+2.java web
+3.give name(pk)
+4.index.html file craete 
+5.right click on webpage add new servlet file ie.serve.java
+6.not need connector add
+7.right click on the index.html and run it.
+
+
+
+
+
+index.html
+<html>
+<body>
+<form method="post" action=serve>
+Enter Your Name
+<input type=text name="t1">
+<br>
+Enter Your Address
+<input type=text name="t2"> 
+<br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+
+serve.java
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class serve extends HttpServlet {
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+PrintWriter pw=response.getWriter();
+response.setContentType("text/html");
+String name=request.getParameter("t1");
+String addr=request.getParameter("t2");
+pw.println("Name is"+name);
+pw.println("Address is"+addr);
+pw.close();
+}
+}

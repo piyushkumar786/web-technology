@@ -1,0 +1,72 @@
+<html>
+<head>
+<script type="text/javascript">
+function displaynum(n1)
+{
+calcform.txt1.value=calcform.txt1.value+n1;
+}
+</script>
+
+<style> 
+         .title{ 
+         margin-bottom: 10px; 
+         text-align:center; 
+         width: 210px; 
+         color:green; 
+         border: solid black 2px; 
+         } 
+  
+         input[type="button"] 
+         { 
+         background-color:green; 
+         color: black; 
+         border: solid black 2px; 
+         width:100% 
+         } 
+  
+         input[type="text"] 
+         { 
+         background-color:white; 
+         border: solid black 2px; 
+         width:100% 
+         } 
+      </style> 
+   </head> 
+<body>
+   <form name=calcform>
+  
+      <table border="1"> 
+	  <tr><td colspan="3" ><h1>CALCULATOR</h1><td></tr>
+         <tr> 
+           
+            <td colspan="3"><input type=text   name=txt1 style="text-align:right"><br> </td> 
+         </tr> 
+         <tr> 
+
+            <td><input type=button name=btn9 value=9 onclick="displaynum(btn9.value)"></td> 
+            <td><input type=button name=btn8 value=8 onclick="displaynum(btn8.value)"></td> 
+            <td><input type=button name=btn7 value=7 onclick="displaynum(btn7.value)"> </td> 
+            <td><input type=button name=btnadd value=+ onclick="displaynum(btnadd.value)"></td> 
+         </tr> 
+         <tr> 
+            <td><input type=button name=btn6 value=6 onclick="displaynum(btn6.value)"> </td> 
+            <td> <input type=button name=btn5 value=5 onclick="displaynum(btn5.value)"></td> 
+            <td><input type=button name=btn4 value=4 onclick="displaynum(btn4.value)"> </td> 
+            <td> <input type=button name=btnsub value=- onclick="displaynum(btnsub.value)"></td> 
+         </tr> 
+         <tr> 
+            <td><input type=button name=btn3 value=3 onclick="displaynum(btn3.value)"> </td> 
+            <td><input type=button name=btn2 value=2 onclick="displaynum(btn2.value)"> </td> 
+            <td><input type=button name=btn1 value=1 onclick="displaynum(btn1.value)"></td> 
+            <td> <input type=button name=btnmul value=* onclick="displaynum(btnmul.value)"></td> 
+         </tr> 
+         <tr> 
+            <td> <input type=button name=btn0 value=0 onclick="displaynum(btn0.value)"></td> 
+            <td><input type=button name=btndot value=. onclick="displaynum(btndot.value)"> </td> 
+            <td> <input type=button name=btnequ value== onclick="txt1.value=eval(txt1.value)"></td> 
+            <td> <input type=button name=btndiv value=/ onclick="displaynum(btndiv.value)"></td> 
+         </tr> 
+      </table> 
+	  </form>
+   </body> 
+</html>    

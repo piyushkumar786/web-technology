@@ -1,0 +1,24 @@
+1.use xampp and notepad++ editor.
+
+2.start xampp apache,tomcat,mysql.
+
+3.create two files insert.html for login page and index.php for mysql and server connectivity.
+
+4.both file copy in follwing path
+C:\xampp\htdocs\create_own_folder(pk)
+if use ubuntu then paste where htdocs folder inside htdocs create own_folder then paste both files.
+
+5.running process go to webbrowser type--->
+localhost/pk(own_folder)/file_name(insert.html)
+
+6.how to create database
+type on webbrowser -->localhost/phpmyadmin/
+phpdb->database name
+phptb->table name
+phpname->user name
+name1->var name use in html
+password1-> var password use in html
+phppass->user password 
+action="index.php"
+
+       ""Congrats your program Succesfully Run""
